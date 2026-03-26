@@ -1,0 +1,195 @@
+/* Base */
+body {
+  margin: 0;
+  padding: 0;
+  background: #0f172a;
+  color: #e5e7eb;
+
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    "Noto Sans",
+    Ubuntu,
+    Cantarell,
+    sans-serif;
+}
+
+main {
+  max-width: 720px;
+  margin: 4rem auto;
+  padding: 3rem 2.5rem;
+}
+
+/* Heading */
+h1 {
+  font-size: 2.6rem;
+  margin-bottom: 1.2rem;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+}
+
+/* Paragraphs */
+p {
+  font-size: 1.08rem;
+  line-height: 1.75;
+  margin-bottom: 1.6rem;
+}
+
+/* Targets only the first paragraph on the page */
+p:first-of-type {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #f8fafc; /* Slightly brighter than your main text color */
+  margin-bottom: 2rem;
+}
+
+/* Links — completely undecorated */
+a {
+  color: #7dd3fc;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+a:hover {
+  color: #38bdf8;
+}
+
+/* Emphasis */
+strong {
+  font-weight: 600;
+  color: #fca5a5;
+}
+
+em {
+  font-style: italic;
+  color: #93c5fd;
+}
+
+/* Strike */
+strike {
+  opacity: 0.6;
+}
+
+/* Code */
+code {
+  font-family:
+    "Hack Nerd Font",
+    "JetBrainsMono Nerd Font",
+    "FiraCode Nerd Font",
+    "CaskaydiaCove Nerd Font",
+    "MesloLGS NF",
+    "RobotoMono Nerd Font",
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    Monaco,
+    Consolas,
+    monospace;
+  
+  background: #111827;
+  color: #93c5fd;
+  padding: 0.2rem 0.4rem;
+  border-radius: 6px;
+  font-size: 0.95em;
+
+  /* Whimsy */
+  display: inline-block;
+  border: 1px solid rgba(147, 197, 253, 0.3);
+  box-shadow: 0 0 8px rgba(147, 197, 253, 0.15);
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Whimsy */
+code:hover {
+  color: #fca5a5;
+  border-color: #fca5a5;
+  box-shadow: 0 0 15px rgba(252, 165, 165, 0.4);
+  transform: scale(1.1) rotate(-2deg);
+}
+
+/* Horizontal Line */
+hr {
+  border: none;
+  border-top: 1px solid #1f2937;
+  margin: 2.5rem 0;
+}
+
+/* Emoji display */
+.emoji-shelf {
+  font-size: 4rem;
+  line-height: 1.2;
+  margin: 2rem 0;
+  
+  /* Critical for mobile: allows emojis to wrap to the next line 
+     instead of causing a horizontal scrollbar */
+  display: block;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-all; /* Forces emojis to wrap even if the browser is being stubborn */
+  letter-spacing: 0.2rem;
+}
+
+/* Optional: Shrink them slightly on small mobile screens 
+   so they don't take up the entire viewport */
+@media (max-width: 600px) {
+  .emoji-shelf {
+    font-size: 2.8rem;
+  }
+}
+
+
+/* If i'm going to faff, I'm going to faff…
+   The Maniacal Shake Animation */
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+/* The Digital Glitch Animation */
+@keyframes glitch {
+  0% { text-shadow: 2px 0 #22d3ee, -2px 0 #fb7185; }
+  25% { text-shadow: -2px 0 #22d3ee, 2px 0 #fb7185; }
+  50% { text-shadow: 2px -1px #22d3ee, -2px 1px #fb7185; }
+  75% { text-shadow: -1px 0 #22d3ee, 1px 0 #fb7185; }
+  100% { text-shadow: 2px 0 #22d3ee, -2px 0 #fb7185; }
+}
+
+.cackle {
+  color: #f472b6; 
+  font-weight: 800;
+  font-style: italic;
+  display: inline-block; /* Crucial: transforms/animations don't work on 'inline' spans */
+  transition: color 0.2s ease;
+  text-shadow: 0 0 8px rgba(244, 114, 182, 0.3);
+}
+
+.cackle:hover {
+  color: #fff; /* Turns white during the glitch to make the colors pop */
+  
+  /* Running both animations at different speeds creates chaos */
+  animation: 
+    shake 0.2s infinite, 
+    glitch 0.1s infinite;
+}
+
+
+/* Mobile */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+}
+

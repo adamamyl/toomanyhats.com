@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>too many hats</title>
+        <link id="favicon" rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎩</text></svg>">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <main>
+            <h1>TooManyHats</h1>
+            
+            <p>Do you ever think <strong>"fuck, erm, which hat <em>am</em> I wearing"</strong>
+                at <code>$meeting</code>?. 
+                <br />
+                If so, how about describing yourself as <em>one with too many hats</em>, and 
+                having a suitable email address.</p>
+            <hr />
+
+            <div class="emoji-shelf">
+                🥳🤠🧢🧑🏽‍🌾🎩👲🏾🧑🏿‍🎓👷🏼👒🪖💂🎓🧙🏽🧑🏻‍🍳🧑🏽‍🚒🧑🏼‍✈️⛑️🕵
+            </div>
+            
+            <hr />
+            
+            <p>Yeap, that's what toomanyhats is all about. Having a quick, simple email address 
+                for my mates/mates of mates, along the lines of <code>me@toomanyhats.org</code>. 
+                <strike>Annoyingly, the .com was <em>already taken.</em></strike> The .com <em>was</em>
+                previously taken, but now it's mine! <span class="cackle">Mwhahahahahahahahaha</span>. 
+                <strike>but you can't have everything, can you?</strike> so you <strong>can</strong> 
+                have everything. Eventually ;)</p>
+            
+            <hr />
+            
+            <p>So, seeing as you know me, you don't need to be told how to get in touch&hellip;</p>
+        </main>
+
+        <script>
+            const emojiShelf = document.querySelector('.emoji-shelf').innerText.trim();
+            const hats = Array.from(emojiShelf);
+            const randomHat = hats[Math.floor(Math.random() * hats.length)];
+            // Update the favicon link with the randomized hat-emoji SVG
+            const favicon = document.getElementById('favicon');
+            favicon.href = `data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>${randomHat}</text></svg>`;
+        </script>
+    </body>
+</html>
